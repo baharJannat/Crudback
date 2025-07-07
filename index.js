@@ -8,6 +8,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const authRoutes = require('./routes/authRoutes');
+app.use('/auth', authRoutes);
+
 mongoose.connect('mongodb://localhost:27017/myCrudDB');
 
 app.use('/users', userRoutes);
