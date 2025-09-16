@@ -1,4 +1,6 @@
+
 // index.js
+
 const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
@@ -6,8 +8,10 @@ const cors = require("cors");
 const { swaggerUi, swaggerSpec } = require("./swagger");
 
 const authRoutes = require("./routes/authRoutes");
+
 const basicAuth = require("./middleware");        // <- Basic Auth middleware
 const userRoutes = require("./routes/userRoutes");
+
 
 const app = express();
 
@@ -36,11 +40,13 @@ if (!MONGO_URI) {
   console.error("❌ Missing MONGO_URI in .env");
   process.exit(1);
 }
+
 mongoose
   .connect(MONGO_URI)
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => {
     console.error("❌ MongoDB connection error:", err);
+
     process.exit(1);
   });
 
@@ -59,7 +65,9 @@ app.get("/health", (_req, res) => res.json({ ok: true }));
 
 // Port
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, "0.0.0.0", () => {
+
   console.log(`Server running on http://localhost:${PORT}`);
   console.log(`Swagger UI at     http://localhost:${PORT}/api-docs`);
 });

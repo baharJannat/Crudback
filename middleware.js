@@ -1,3 +1,4 @@
+
 // middleware.js
 const User = require('./models/user'); // adjust path if different
 
@@ -37,3 +38,4 @@ const basicAuth = async (req, res, next) => {
 };
 
 module.exports = basicAuth;
+

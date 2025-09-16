@@ -7,6 +7,7 @@ const auth = require('../middleware'); // we'll use it for logout too
 const JWT_SECRET = process.env.JWT_SECRET || 'devOnlySecret';
 
 // POST /auth/login
+
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -18,11 +19,13 @@ router.post('/login', async (req, res) => {
 
     // include tokenVersion in payload:
     const token = jwt.sign({ id: user._id.toString(), v: user.tokenVersion }, JWT_SECRET, { expiresIn: '1h' });
+
     res.json({ token });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 // POST /auth/logout  -> increments version to revoke existing tokens
 router.post('/logout', auth, async (req, res) => {
@@ -33,5 +36,6 @@ router.post('/logout', auth, async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 module.exports = router;

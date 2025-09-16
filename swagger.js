@@ -7,6 +7,7 @@ const options = {
     info: {
       title: 'User CRUD API',
       version: '1.0.0',
+
       description: 'Express + MongoDB with HTTP Basic Auth',
     },
     servers: [{ url: 'http://localhost:5000' }],
@@ -24,4 +25,5 @@ const options = {
 };
 
 const swaggerSpec = swaggerJsdoc(options);
+
 module.exports = { swaggerUi, swaggerSpec };

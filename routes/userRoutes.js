@@ -100,7 +100,9 @@ const User = require("../models/user");
  *     summary: Get all users
  *     tags: [Users]
  *     security:
+
  *       - basicAuth: []
+
  *     responses:
  *       200:
  *         description: Array of users
@@ -119,7 +121,10 @@ const User = require("../models/user");
  *     summary: Get a user by ID
  *     tags: [Users]
  *     security:
+
  *       - basicAuth: []
+
+
  *     parameters:
  *       - in: path
  *         name: id
@@ -149,7 +154,9 @@ const User = require("../models/user");
  *     summary: Create a new user
  *     tags: [Users]
  *     security:
+
  *       - basicAuth: []
+
  *     requestBody:
  *       required: true
  *       content:
@@ -178,7 +185,9 @@ const User = require("../models/user");
  *     summary: Replace a user (all required fields)
  *     tags: [Users]
  *     security:
+
  *       - basicAuth: []
+
  *     parameters:
  *       - in: path
  *         name: id
@@ -211,7 +220,9 @@ const User = require("../models/user");
  *     summary: Update a user (partial)
  *     tags: [Users]
  *     security:
+
  *       - basicAuth: []
+
  *     parameters:
  *       - in: path
  *         name: id
@@ -242,7 +253,9 @@ const User = require("../models/user");
  *     summary: Delete a user by ID
  *     tags: [Users]
  *     security:
+
  *       - basicAuth: []
+
  *     parameters:
  *       - in: path
  *         name: id
