@@ -1,0 +1,50 @@
+# Ignore node_modules (rebuilt during Docker build)
+node_modules
+
+# Ignore package-lock.json (optional, uncomment if not needed in build)
+# package-lock.json
+
+# Ignore logs and temporary files
+npm-debug.log
+*.log
+*.log.*
+
+# Ignore environment files (sensitive data)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore test and coverage directories
+coverage/
+test/
+tests/
+__tests__
+
+# Ignore temporary and cache directories
+.tmp/
+temp/
+cache/
+
+# Ignore documentation and non-essential files
+README.md
+LICENSE
+.git
+.gitignore
+docker-compose.yml
+Dockerfile
+
+# Ignore Swagger-related files if not needed in production
+swagger.json
+swagger.yaml
