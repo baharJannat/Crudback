@@ -16,5 +16,4 @@ COPY . .
 # Expose the port defined in .env (default 5000)
 EXPOSE 5000
 
-# Command to run the application
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
